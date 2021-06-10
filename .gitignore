@@ -1,0 +1,3 @@
+*.o
+bk7231n_temperature_demo/output
+bk7231n_temperature_demo/.vscode
