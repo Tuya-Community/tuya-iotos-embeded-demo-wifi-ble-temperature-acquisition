@@ -24,7 +24,7 @@
 #include "tuya_led.h"
 #include "tuya_uart.h"
 #include "BkDriverUart.h"
-#include "app_temperature.h"
+#include "tuya_app_temperature.h"
 /* Private includes ----------------------------------------------------------*/
 #include "tuya_device.h"
 

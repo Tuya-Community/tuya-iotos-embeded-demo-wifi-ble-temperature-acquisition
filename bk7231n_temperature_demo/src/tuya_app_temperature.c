@@ -15,8 +15,8 @@
 #include "tuya_hal_system.h"
 #include "uni_thread.h"
 /* Private includes ----------------------------------------------------------*/
-#include "b3950.h"
-#include "app_temperature.h"
+#include "tuya_b3950.h"
+#include "tuya_app_temperature.h"
 
 /* Private variables ---------------------------------------------------------*/
 DP_VALUE_T temper_s = {
@@ -81,23 +81,20 @@ VOID app_report_all_dp_status(VOID)
 {
     OPERATE_RET op_ret = OPRT_OK;
 
-    INT_T dp_cnt = 0;
-    dp_cnt = 1;
-
-    TY_OBJ_DP_S *dp_arr = (TY_OBJ_DP_S *)Malloc(dp_cnt*SIZEOF(TY_OBJ_DP_S));
+    TY_OBJ_DP_S *dp_arr = (TY_OBJ_DP_S *)Malloc(SIZEOF(TY_OBJ_DP_S));
     if(NULL == dp_arr) {
         PR_ERR("malloc failed");
         return;
     }
 
-    memset(dp_arr, 0, dp_cnt*SIZEOF(TY_OBJ_DP_S));
+    memset(dp_arr, 0, SIZEOF(TY_OBJ_DP_S));
 
     dp_arr[0].dpid = temper_s.dp_id;
     dp_arr[0].type = PROP_VALUE;
     dp_arr[0].time_stamp = 0;
     dp_arr[0].value.dp_value = temper_s.value;
 
-    op_ret = dev_report_dp_json_async(NULL,dp_arr,dp_cnt);
+    op_ret = dev_report_dp_json_async(NULL,dp_arr,1);
     Free(dp_arr);
     if(OPRT_OK != op_ret) {
         PR_ERR("dev_report_dp_json_async relay_config data error,err_num",op_ret);
@@ -121,15 +118,6 @@ VOID deal_dp_proc(IN CONST TY_OBJ_DP_S *root)
 
     dpid = root->dpid;
     PR_DEBUG("dpid:%d",dpid);
-    
-    switch (dpid) {
-    
-    case 0:
-
-        break;
-    default:
-        break;
-    }
 
     app_report_all_dp_status();
 

@@ -32,15 +32,15 @@ $ git clone https://registry.code.tuya-inc.top/hardware_developer/tuya-iotos-emb
 ```
 ├── src	
 |    ├── app_driver
-|    |    └── b3950.c            //温度传感器驱动相关
+|    |    └── tuya_b3950.c            //温度传感器驱动相关
 |    ├── tuya_device.c             //应用层入口文件
-|    └── app_temperature.c            //主要应用层
+|    └── tuya_app_temperature.c            //主要应用层
 |
 ├── include				//头文件目录
 |    ├── app_driver
-|    |    └──b3950.h
+|    |    └──tuya_b3950.h
 |    ├── tuya_device.h
-|    └── app_temperature.h
+|    └── tuya_app_temperature.h
 |
 └── output              //编译产物
 ```

@@ -9,8 +9,8 @@
  * @LastEditors: xjw
  * @LastEditTime: 2021-04-28 16:44:58
  */
-#ifndef __B3950_H__
-#define __B3950_H__
+#ifndef __TUYA_B3950_H__
+#define __TUYA_B3950_H__
 
 #ifdef __cplusplus
     extern "C" {

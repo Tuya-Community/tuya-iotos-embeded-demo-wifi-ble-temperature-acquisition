@@ -10,7 +10,7 @@
  * @LastEditTime: 2021-04-29 15:35:04
  */
 /* Private includes ----------------------------------------------------------*/
-#include "b3950.h"
+#include "tuya_b3950.h"
 
 /* Private variables ---------------------------------------------------------*/
 tuya_adc_t *temper_adc;

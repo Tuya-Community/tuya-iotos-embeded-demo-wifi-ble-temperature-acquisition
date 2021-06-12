@@ -33,15 +33,15 @@ This Demo is based on Tuya Smart Cloud Platform, Tuya Smart APP, IoTOS Embeded W
 ```
 ├── src	
 |    ├── app_driver
-|    |    └── b3950.c            //temperature sensor drive
+|    |    └── tuya_b3950.c            //temperature sensor drive
 |    ├── tuya_device.c             //application layer entry file
-|    └── app_temperature.c            //primary application layer
+|    └── tuya_app_temperature.c            //primary application layer
 |
 ├── include				//header directory
 |    ├── app_driver
-|    |    └──b3950.h
+|    |    └──tuya_b3950.h
 |    ├── tuya_device.h
-|    └── app_temperature.h
+|    └── tuya_app_temperature.h
 |
 └── output              //compile the product
 ```

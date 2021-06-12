@@ -10,8 +10,8 @@
  * @LastEditTime: 2021-04-28 16:50:14
  */
 
-#ifndef __APP_TEMPERATURE_H__
-#define __APP_TEMPERTURE_H__
+#ifndef __TUYA_APP_TEMPERATURE_H__
+#define __TUYA_APP_TEMPERTURE_H__
 
 #include "uni_log.h"
 #include "tuya_cloud_error_code.h"
